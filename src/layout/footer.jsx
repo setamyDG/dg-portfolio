@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SocialMediaIcons from '../components/misc/social-media-icons';
 
 const Container = styled.div`
-  background: ${({ theme }) => theme.colors.dark};
+  background: ${({ theme }) => theme.colors.black};
   display: flex;
   justify-content: center;
   align-items: center;

@@ -3,7 +3,7 @@ export default {
     sectionWidth: '1100px',
   },
   colors: {
-    black: '#0000',
+    black: '#000',
     white: '#FFF',
     dark: '#212121',
     lightDark: '#2e2e2e',

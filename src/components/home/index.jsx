@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import BlogSection from './blog-section';
-import CustomButton from '../misc/custom-button';
 import Line from '../../static/line.svg';
+import porfolioBg from '../../assets/images/portfolio-bg.jpg';
+import { CustomButton } from '../misc';
 import OnlyLine from '../../static/lineOnly.svg';
 
 const Container = styled.div`
@@ -10,15 +11,8 @@ const Container = styled.div`
   height: calc(100vh - 75px);
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
-`;
-
-const ContentContainer = styled.p`
-  padding: 0px 300px;
-  margin-top: -100px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: column;
 `;
 
 const BottomInformation = styled.div`
@@ -31,7 +25,33 @@ const BottomInformation = styled.div`
   }
 `;
 
-const HelloOrName = styled.p`
+const Content = styled.div`
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ImageContainer = styled.div`
+  width: 40%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+`;
+
+const TextContainer = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-flow: column;
+  margin-bottom: 120px;
+`;
+
+const Title = styled.p`
   font-size: 7rem;
   color: white;
   letter-spacing: 0.2em;
@@ -49,6 +69,10 @@ const Subtitle = styled.p`
   font-size: 1.3rem;
 `;
 
+const StyledImg = styled.img`
+  /* opacity: 0; */
+`;
+
 const HomeContent = () => {
   const scrollPage = () => {
     window.scrollBy({
@@ -60,14 +84,19 @@ const HomeContent = () => {
   return (
     <>
       <Container>
-        <ContentContainer>
-          <HelloOrName>Hello</HelloOrName>
-          <SubTitleContainer>
-            <OnlyLine />
-            <Subtitle>Front-end Developer</Subtitle>
-          </SubTitleContainer>
-          <CustomButton>Check my blog</CustomButton>
-        </ContentContainer>
+        <Content>
+          <ImageContainer>
+            <StyledImg src={porfolioBg} />
+          </ImageContainer>
+          <TextContainer>
+            <Title>Hello</Title>
+            <SubTitleContainer>
+              <OnlyLine />
+              <Subtitle>Front-end Developer</Subtitle>
+            </SubTitleContainer>
+            <CustomButton>Read more</CustomButton>
+          </TextContainer>
+        </Content>
         <BottomInformation onClick={scrollPage}>
           <Line />
         </BottomInformation>

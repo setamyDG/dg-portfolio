@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
 
 const StyledMain = styled.main`
   flex: 1 0 auto;
-  background: ${({ theme }) => theme.colors.dark};
+  background: ${({ theme }) => theme.colors.black};
 `;
 
 const Layout = ({ children }) => (

@@ -54,8 +54,6 @@ const BlogImageContainer = styled.div`
 `;
 
 const StyledImage = styled.img`
-  width: 100%;
-  height: 100%;
   border: 2px solid white;
   object-fit: cover;
 `;
